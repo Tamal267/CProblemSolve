@@ -2,7 +2,7 @@
 int main(){
   int n;
   scanf("%d",&n);
-  int k=2*n-1;
+  int k=2*n-1; //we have to print 7 digits in the first line if input is 4
   int l=k-1;
   int i,j;
   for(i=0;i<k;i++){
