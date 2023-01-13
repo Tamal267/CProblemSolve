@@ -1,3 +1,4 @@
+//interation method
 #include<stdio.h>
 int main(){
   int n;
@@ -20,4 +21,44 @@ int main(){
     printf("\n");
   }
   return 0;
+}
+//recursion method
+#include<iostream>
+#include<cmath>
+using std::cout;
+void abc(int x, int n){
+	if(n==0) return;
+	cout<<x<<"\40";
+	abc(x-1,n-1);
+}
+void def(int x , int n){
+	if(n==0) return;
+	cout<<x<<"\40";
+	def(x,n-1);
+}
+void abc2(int x, int n){
+	if(n==0) return;
+	abc2(x-1,n-1);
+	cout<<x<<"\40";
+}
+void ghi(int n){
+	if(n==1) {
+		cout<<"1\40";
+		return ;
+	}
+	cout<<n<<"\40";
+	ghi(n-1);
+	cout<<n<<"\40";
+}
+void print(int n , int x){
+	if(n==1) {
+		ghi(x),cout<<"\12";
+		return ;
+	}
+	abc(x,x-n+1),def(n,n-2),cout<<n<<"\40",def(n,n-2),abc2(x,x-n+1),cout<<"\12";
+	print(n-1,x);
+	abc(x,x-n+1),def(n,n-2),cout<<n<<"\40",def(n,n-2),abc2(x,x-n+1),cout<<"\12";
+}
+int main(){
+	print(4,4);
 }
